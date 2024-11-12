@@ -1,0 +1,11 @@
+title: "BS EN 12056\nCalculations"
+tooltip: Produce calculations for gravity drainage systems in accordance with BS EN 12056-2
+layout:
+  - Place Calculation Connections
+  - Set Quantities for Appliances
+  - -----
+  - Add Shared Parameters
+  - -----
+  - Produce Calculations
+  - -----
+  - Remove Calculation Connections

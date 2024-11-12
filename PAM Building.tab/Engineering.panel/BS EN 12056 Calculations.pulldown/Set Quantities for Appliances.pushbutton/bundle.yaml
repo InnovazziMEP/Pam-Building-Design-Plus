@@ -1,0 +1,18 @@
+title:
+  en_us: Set Quantities for Appliances
+
+tooltip:
+  en_us: Sets the number of appliances for sizing connections
+
+context:
+  any:
+  - active-floor-plan
+  - active-elevation-view
+  - active-section-view
+  - active-3d-view
+  
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022

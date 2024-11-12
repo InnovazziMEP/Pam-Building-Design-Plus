@@ -1,0 +1,18 @@
+title:
+  en_us: Produce Calculations
+
+tooltip:
+  en_us: Produces calculations to BS EN 12056-2
+
+context:
+  any:
+  - active-floor-plan
+  - active-elevation-view
+  - active-section-view
+  - active-3d-view
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2023

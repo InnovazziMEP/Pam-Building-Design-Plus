@@ -1,0 +1,15 @@
+{
+    "builtin": "False",
+    "default_enabled": "True",
+    "type": "extension",
+    "rocket_mode_compatible": "True",
+    "name": "PAM Building Design+",
+    "description": "Collection of tools for public health engineering",
+    "author": "PAM Building UK",
+    "author_profile": "https://www.linkedin.com/company/pam-building-uk",
+    "url": "https://github.com/InnovazziMEP/PAM-Building-Design-Plus.git",
+    "website": "https://www.pambuilding.co.uk",
+    "image": "",
+    "dependencies": []
+}
+

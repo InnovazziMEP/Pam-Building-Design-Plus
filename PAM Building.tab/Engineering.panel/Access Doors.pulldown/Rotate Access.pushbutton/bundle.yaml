@@ -1,0 +1,19 @@
+title:
+  en_us: Rotate Access
+
+tooltip:
+  en_us: Rotates access doors around Z axis
+
+context:
+  any:
+  - active-floor-plan
+  - active-elevation-view
+  - active-section-view
+  - active-3d-view
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022
+

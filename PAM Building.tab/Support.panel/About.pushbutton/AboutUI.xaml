@@ -1,0 +1,309 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="550" Width="600"
+    WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+    WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <!-- BUTTON STYLE-->
+        <Style TargetType="Button">
+            <!--[BUTTON] STYLES-->
+            <Setter Property="TextElement.FontFamily" Value="Source Sans Pro"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <!--[BUTTON] TEMPLATE-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement"
+                                CornerRadius="4"
+                                Background="#FF3B4559"
+                                BorderBrush="#FFDC4405"
+                                BorderThickness="1">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Trigger for IsMouseOver -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background" Value="#FFDC4405"/>
+                                <Setter TargetName="BorderElement" Property="BorderBrush" Value="#FF3B4559"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Define the style for TextBlock -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Source Sans Pro"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        
+    </Window.Resources>
+
+    <!--MAIN-->
+    <Border CornerRadius="10" 
+            Background="#FFDC4405" 
+            BorderBrush="#FF3B4559" 
+            BorderThickness="4"
+            Padding="5">
+
+        <Grid>
+            <!-- Background Color -->
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF3B4559" Offset="0" />
+                    <GradientStop Color="#FFEBECEE" Offset="0.85" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <!-- Background Color -->
+
+            <!-- ROW DEFINITIONS-->
+            <Grid.RowDefinitions>
+                <!-- Header Row -->
+                <RowDefinition Height="115"/>
+                <!-- Main Content Row -->
+                <RowDefinition/>
+                <!-- Footer Row -->
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <!--HEADER START-->
+            <Grid MouseDown="header_drag" Background="Transparent" Grid.Row="0" Margin="10">
+                <!--HEADER GRID-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <!--IMAGE-->
+                <TextBlock Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <Hyperlink NavigateUri="https://www.pambuilding.co.uk" 
+                               TextDecorations="None"
+                               RequestNavigate="Hyperlink_RequestNavigate">
+                        <Image x:Name="logo"
+                               Source="https://iili.io/2Kwe7CN.png"
+                               Height="98" Width="166"
+                               Margin="0,0,0,0"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Stretch="Uniform"
+                               RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <ScaleTransform x:Name="imageScaleTransform"/>
+                            </Image.RenderTransform>
+                            <Image.Triggers>
+                                <EventTrigger RoutedEvent="Image.MouseEnter">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="imageScaleTransform"
+                                                             Storyboard.TargetProperty="ScaleX"
+                                                             To="1.1" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="imageScaleTransform"
+                                                             Storyboard.TargetProperty="ScaleY"
+                                                             To="1.1" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="Image.MouseLeave">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="imageScaleTransform"
+                                                             Storyboard.TargetProperty="ScaleX"
+                                                             To="1.0" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="imageScaleTransform"
+                                                             Storyboard.TargetProperty="ScaleY"
+                                                             To="1.0" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Image.Triggers>
+                        </Image>
+                    </Hyperlink>
+                </TextBlock>
+
+                <!--CLOSE-->
+                <Button Content="Close"
+                        Grid.Column="2"
+                        Width="60" Height="20"
+                        Margin="0,0,0,0"
+                        FontSize="10"
+                        Click="button_close"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"   
+                        Background="Transparent" Foreground="White" BorderBrush="Transparent">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+            </Grid>
+            <!--HEADER END-->
+
+            <StackPanel Margin="0" Grid.Row="1" HorizontalAlignment="Center">
+                <!-- Additional Information -->
+                <Border Background="#FF3B4559" CornerRadius="10" Padding="20" Margin="0" Width="460">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#FFFFFF" 
+                          Direction="0" 
+                          ShadowDepth="0" 
+                          Opacity="1" 
+                          BlurRadius="30"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <!-- Description -->
+                        <TextBlock FontFamily="Source Sans Pro"
+                                    Margin="0,0,0,10"><Run Text="🙋‍♂️ Hello!"/></TextBlock>
+
+                        <TextBlock FontFamily="Source Sans Pro"
+                                    Margin="0,0,0,10"><Run Text="With this pyRevit extension, which is mainly aimed at public health engineering, you will enhance productivity and save time with repetitive task."/><LineBreak/><Run/><LineBreak/><Run Language="en-gb" Text="You can now easily schedule your Revit elements by level using our Set Reference Level tool which updates all level related parameters for multiple categories."/><LineBreak/><Run/><LineBreak/><Run Language="en-gb" Text="Place and rotate access doors, quickly align your annotations in floor plan views, add our couplings on pipes every 3 metres or even convert from our generic content to full data in seconds."/></TextBlock>
+
+                        <TextBlock FontFamily="Source Sans Pro" 
+                                    Margin="0,0,0,5"><Run Text="For any technical enquiries please call 01952 262 529 or email us at technical.pam@saint-gobain.com."/></TextBlock>
+
+                        <!-- Image with Animation -->
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Hyperlink NavigateUri="mailto:technical.pam@saint-gobain.com" RequestNavigate="Hyperlink_RequestNavigate"
+               TextDecorations="None">
+        <Image x:Name="Email"
+               Source="https://iili.io/dcQSbxs.png"
+               Height="60" Width="60"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               Stretch="Uniform">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                         To="1.2" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                                         To="1.2" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                         To="1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                                         To="1" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+    </Hyperlink>
+                        </TextBlock>
+                        <TextBlock/>
+                        <!-- Made by -->
+                        <TextBlock 
+                            FontSize="14" 
+                            Foreground="#FFFFFF"
+                            HorizontalAlignment="Center"><Run Text="Made by"/><Run Language="en-gb" Text=" PAM Building UK"/></TextBlock>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <!--FOOTER-->
+            <TextBlock 
+                Grid.Column="1"
+                FontSize="14" 
+                Foreground="#FFFFFF"
+                Opacity="0.8"
+                TextWrapping="Wrap"
+                Grid.Row="2"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center">
+                <Run Text="PAM Building"/><Run Language="en-gb" Text=" "/><Run Text="Extension | Version 1.0"/></TextBlock>
+
+            <!-- Animated Stars Background -->
+            <Canvas Grid.Row="1">
+                <Canvas.Resources>
+                    <!-- Define the star animation storyboards -->
+                    <Storyboard x:Key="flashingStars">
+                        <DoubleAnimation 
+                            Storyboard.TargetProperty="Opacity" 
+                            From="0.3" To="1.0" 
+                            Duration="0:0:3" 
+                            AutoReverse="True" 
+                            RepeatBehavior="Forever" />
+                    </Storyboard>
+
+                    <Storyboard x:Key="movingStars">
+                        <DoubleAnimation 
+                            Storyboard.TargetProperty="RenderTransform.X" 
+                            From="0" To="1" 
+                            Duration="0:0:3" 
+                            AutoReverse="True" 
+                            RepeatBehavior="Forever" />
+                        <DoubleAnimation 
+                            Storyboard.TargetProperty="RenderTransform.Y" 
+                            From="0" To="5" 
+                            Duration="0:0:3" 
+                            AutoReverse="True" 
+                            RepeatBehavior="Forever" />
+                    </Storyboard>
+
+                    <!-- Star Style -->
+                    <Style x:Key="starStyle" TargetType="Ellipse">
+                        <Setter Property="Fill" Value="White"/>
+                        <Setter Property="Opacity" Value="0.7"/>
+                        <Setter Property="Width" Value="3"/>
+                        <Setter Property="Height" Value="3"/>
+                        <Setter Property="Canvas.Left" Value="0"/>
+                        <Setter Property="Canvas.Top" Value="0"/>
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <TranslateTransform/>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="Ellipse.Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource flashingStars}" />
+                                <BeginStoryboard Storyboard="{StaticResource movingStars}" />
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Canvas.Resources>
+
+                <!-- Stars -->
+                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="25" Canvas.Top="50"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="50" Canvas.Top="100"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="565" Canvas.Top="180"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="30" Canvas.Top="200"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="150" Canvas.Top="250"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="80" Canvas.Top="305"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="120" Canvas.Top="350"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="2" Height="2" Canvas.Left="300" Canvas.Top="325"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="400" Canvas.Top="275"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="300" Canvas.Top="125"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="450" Canvas.Top="150"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="510" Canvas.Top="150"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="540" Canvas.Top="50"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="475" Canvas.Top="330"/>
+                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="540" Canvas.Top="250"/>
+            </Canvas>
+
+        </Grid>
+    </Border>
+</Window>

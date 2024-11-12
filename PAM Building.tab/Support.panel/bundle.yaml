@@ -1,0 +1,12 @@
+title:
+  en_us: Support
+
+layout:
+  - About
+  - Support
+
+background:
+  panel: '#EEEEEE'
+  title: '#7FB1DF'
+  slideout: '#EEEEEE'
+  

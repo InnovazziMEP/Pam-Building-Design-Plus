@@ -1,0 +1,18 @@
+title:
+  en_us: Place Calculation Connections
+
+tooltip:
+  en_us: Places foul drainage calculation connections
+
+context:
+  any:
+  - active-floor-plan
+  - active-elevation-view
+  - active-section-view
+  - active-3d-view
+  
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022

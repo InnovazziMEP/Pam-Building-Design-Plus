@@ -1,0 +1,12 @@
+title: 
+  en_us: Batch Save Families
+
+tooltip:
+  en_us: Batch save families from project into a folder
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022
+

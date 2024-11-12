@@ -1,0 +1,11 @@
+title:
+  en_us: Add Shared Parameters
+
+tooltip:
+  en_us: Adds shared parameters to be able to produce foul drainage calculations to BS EN 12056-2. All parameters are added into the shared parameter file and inside the project. 
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022

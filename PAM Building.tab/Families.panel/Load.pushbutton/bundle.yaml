@@ -1,0 +1,12 @@
+title: 
+  en_us: Batch Load Families
+
+tooltip:
+  en_us: Batch load families from folder. Please be as specific as possible selecting the folder, as this script will load all the families from sub-folders as well.
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022
+

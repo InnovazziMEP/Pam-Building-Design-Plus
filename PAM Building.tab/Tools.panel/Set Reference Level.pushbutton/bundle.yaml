@@ -1,0 +1,22 @@
+title:
+  en_us: Set Reference Level
+  
+tooltip:
+  en_us: Sets Level, Elevation from Level and Reference Level parameters for selected elements
+
+context:
+  any:
+  - active-rcp-plan 
+  - active-floor-plan
+  - active-structural-plan
+  - active-area-plan
+  - active-elevation-view
+  - active-section-view
+  - active-3d-view
+
+# bundle author
+author: PAM Building UK
+
+# minimium supported Revit version
+min_revit_version: 2022
+
