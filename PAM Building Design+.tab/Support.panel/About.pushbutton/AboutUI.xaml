@@ -45,7 +45,7 @@
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
-        
+
     </Window.Resources>
 
     <!--MAIN-->
@@ -219,7 +219,9 @@
                         <TextBlock 
                             FontSize="14" 
                             Foreground="#FFFFFF"
-                            HorizontalAlignment="Center"><Run Text="Made by"/><Run Language="en-gb" Text=" PAM Building UK"/></TextBlock>
+                            HorizontalAlignment="Center">
+                            <Run Text="Made by"/><Run Language="en-gb" Text=" PAM Building UK"/>
+                        </TextBlock>
                     </StackPanel>
                 </Border>
             </StackPanel>
@@ -234,7 +236,8 @@
                 Grid.Row="2"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center">
-                <Run Text="PAM Building"/><Run Language="en-gb" Text=" "/><Run Text="Extension | Version 1.0"/></TextBlock>
+                <Run Text="PAM Building Design+"/><Run Language="en-gb"/><Run Text=" | Version 1.0"/>
+            </TextBlock>
 
             <!-- Animated Stars Background -->
             <Canvas Grid.Row="1">
