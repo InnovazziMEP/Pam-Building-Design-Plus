@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Rotate\nAccess Doors"
+__title__ = "Rotate Access Doors"
 
 #Add imports
 import os
