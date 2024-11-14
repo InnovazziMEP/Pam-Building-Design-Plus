@@ -507,11 +507,11 @@ try:
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
                         family_name = "SGPAMUK_ES_Movement Connector_EF058_NG"
                 
-                elif "Rodding Branch" in description_param:
-                    if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Rodding Branch_EF009_DI"
-                    elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Rodding Branch_EF009_NG"
+                #elif "Rodding Branch" in description_param:
+                    #if selected_coupling == 'EC002 - Ductile Iron Coupling':
+                        #family_name = "SGPAMUK_ES_Rodding Branch_EF009_DI"
+                    #elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
+                        #family_name = "SGPAMUK_ES_Rodding Branch_EF009_NG"
                 
                 # Determine family based on description and diameter
                 elif "Short Radius Bend" in description_param and converted_instance_diameter_param_value > 300:
