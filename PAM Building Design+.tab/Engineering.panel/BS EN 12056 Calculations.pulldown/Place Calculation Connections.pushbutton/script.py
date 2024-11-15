@@ -350,8 +350,10 @@ def select_elements():
                         with TransactionGroup(doc, __title__) as tg:
                             tg.Start()
 
-                            added_rules = []  # Track added rules
-
+                            # Track added rules
+                            added_rules = []
+                            
+                            # Transaction to add rules to routing preferences
                             with Transaction(doc, "Add SGPAMUK_ES_EN 12056 Calculation Connector to Routing Preferences") as t1:
                                 t1.Start()
                                 try:
