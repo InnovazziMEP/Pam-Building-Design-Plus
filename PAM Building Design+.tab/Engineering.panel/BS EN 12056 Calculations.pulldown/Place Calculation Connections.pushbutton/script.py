@@ -350,43 +350,31 @@ def select_elements():
                         with TransactionGroup(doc, __title__) as tg:
                             tg.Start()
 
-                            # Transaction to add rules to routing preferences
+                            added_rules = []  # Track added rules
+
                             with Transaction(doc, "Add SGPAMUK_ES_EN 12056 Calculation Connector to Routing Preferences") as t1:
                                 t1.Start()
-
                                 try:
-                                    # Get unique pipe types from selected pipes
                                     unique_pipe_types = {}
                                     for pipe in selected_elements:
                                         type_name = pipe.get_Parameter(BuiltInParameter.ELEM_TYPE_PARAM).AsValueString()
                                         if type_name not in unique_pipe_types:
                                             unique_pipe_types[type_name] = pipe
 
-                                    unique_elements = list(unique_pipe_types.values())
-
-                                    for element in unique_elements:
+                                    for element in unique_pipe_types.values():
                                         elemType = doc.GetElement(element.GetTypeId())
                                         routManager = elemType.RoutingPreferenceManager
 
                                         for fam in matching_families:
                                             newRule = RoutingPreferenceRule(fam.Id, "Sizing Connection Rule")
-
-                                            # Get family type name
-                                            type_name = fam.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM).AsString()
-
-                                            # Default size 
-                                            min_size = System.Double(50/304.8)
-                                            max_size = System.Double(600/304.8)
-                                            primary_size_criterion = PrimarySizeCriterion(min_size, max_size)
-
-                                            # Apply criteria directly to the rule
-                                            newRule.AddCriterion(primary_size_criterion)
-
-                                            # Add the rule to the routing preferences manager
+                                            min_size = System.Double(50 / 304.8)
+                                            max_size = System.Double(600 / 304.8)
+                                            newRule.AddCriterion(PrimarySizeCriterion(min_size, max_size))
                                             routManager.AddRule(RoutingPreferenceRuleGroupType.Unions, newRule, 0)
 
-                                    t1.Commit()
+                                            added_rules.append((routManager, RoutingPreferenceRuleGroupType.Unions, 0))  # Track rule
 
+                                    t1.Commit()
                                 except Exception as e:
                                     t1.RollBack()
                                     output.print_md("Error while adding rules: {}".format(e))
@@ -444,24 +432,10 @@ def select_elements():
                                 with Transaction(doc, "Remove SGPAMUK_ES_EN 12056 Calculation Connector from Routing Preferences") as t3:
                                     t3.Start()
                                     try:
-                                        # Get unique pipe types from selected pipes again
-                                        unique_pipe_types = {}
-                                        for pipe in selected_elements:
-                                            type_name = pipe.get_Parameter(BuiltInParameter.ELEM_TYPE_PARAM).AsValueString()
-                                            if type_name not in unique_pipe_types:
-                                                unique_pipe_types[type_name] = pipe
-
-                                        unique_elements = list(unique_pipe_types.values())
-
-                                        for element in unique_elements:
-                                            elemType = doc.GetElement(element.GetTypeId())
-                                            routManager = elemType.RoutingPreferenceManager
-
-                                            # Remove only the rule at index 0:
-                                            routManager.RemoveRule(RoutingPreferenceRuleGroupType.Unions, 0)
+                                        for routManager, group_type, index in added_rules:
+                                            routManager.RemoveRule(group_type, index)  # Remove the specific rule added
 
                                         t3.Commit()
-
                                     except Exception as ex:
                                         t3.RollBack()
                                         output.print_md("Error while removing rules: {}".format(ex))
