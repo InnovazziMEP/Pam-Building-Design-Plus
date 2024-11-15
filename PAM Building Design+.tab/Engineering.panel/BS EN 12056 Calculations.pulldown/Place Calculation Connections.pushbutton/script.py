@@ -352,7 +352,7 @@ def select_elements():
 
                             # Track added rules
                             added_rules = []
-                            
+
                             # Transaction to add rules to routing preferences
                             with Transaction(doc, "Add SGPAMUK_ES_EN 12056 Calculation Connector to Routing Preferences") as t1:
                                 t1.Start()
@@ -438,6 +438,7 @@ def select_elements():
                                             routManager.RemoveRule(group_type, index)  # Remove the specific rule added
 
                                         t3.Commit()
+                                        
                                     except Exception as ex:
                                         t3.RollBack()
                                         output.print_md("Error while removing rules: {}".format(ex))
