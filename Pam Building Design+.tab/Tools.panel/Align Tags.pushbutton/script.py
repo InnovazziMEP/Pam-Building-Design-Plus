@@ -162,12 +162,6 @@ def show_window(loaded_tags):
     else:
         return None, run_button_clicked[0]
 
-"""# Check if active view is valid for the script to run
-cView = doc.ActiveView
-if cView.ViewType not in [ViewType.FloorPlan, ViewType.CeilingPlan, ViewType.AreaPlan]:
-    forms.alert('This tool only works in Floor, Ceiling, or Area Plan Views', title='Change View')
-    script.exit()"""
-
 # Get the loaded tag families
 loaded_tag_families = get_loaded_tag_families(doc)
 

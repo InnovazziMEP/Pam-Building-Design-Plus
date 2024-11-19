@@ -220,7 +220,7 @@
                             FontSize="14" 
                             Foreground="#FFFFFF"
                             HorizontalAlignment="Center">
-                            <Run Text="Made by"/><Run Language="en-gb" Text=" PAM Building UK"/>
+                            <Run Text="Made by"/><Run Language="en-gb" Text=" Pam Building UK"/>
                         </TextBlock>
                     </StackPanel>
                 </Border>
