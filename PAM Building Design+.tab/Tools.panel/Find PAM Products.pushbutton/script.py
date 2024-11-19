@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Isolate PAM Products"
+__title__ = "Find PAM Products"
 
 # Import required classes and add references to required libraries
 import clr

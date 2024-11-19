@@ -1,24 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Place\nPAM Couplings"
-__author__ = "PAM Building UK"
-__doc__ = """Version = 1.0
-Date    = 01.08.2024
-__________________________________________________________________
-Compatibility:
-
-Revit 2023+
-__________________________________________________________________
-Description:
-
-Places PAM couplings every 3m on selected pipes.
-__________________________________________________________________
-How-to:
-
--> Click the button
--> Select desired coupling and press 'Select Pipes'
--> Select the pipes and press 'Finish' to complete
-__________________________________________________________________
-"""
+__title__ = "Add PAM Couplings"
 
 # Import required classes and add references to required libraries
 import os

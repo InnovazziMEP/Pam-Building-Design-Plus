@@ -1,28 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = 'Batch Load\nFamilies'
-__author__ = "PAM Building UK"
-__doc__ = """Version = 1.0
-Date    = 01.08.2024
-__________________________________________________________________
-Compatibility:
-
-Revit 2023+
-__________________________________________________________________
-Description:
-
-Batch load families from folder
-
-Note:
-Please be as specific as possible selecting the folder,
-as this script will load all the families from sub-folders as well.
-__________________________________________________________________
-How-to:
-
--> Click the button
--> Select folder location
--> Click 'OK'
-__________________________________________________________________
-"""
+__title__ = 'Batch Load Families'
 
 # Add references to required Revit API libraries and import required classes from Revit API and pyRevit
 import clr

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Sum Total Pipe Length"
+__title__ = "Sum Total Length"
 
 # Import required classes and add references to required libraries
 import clr

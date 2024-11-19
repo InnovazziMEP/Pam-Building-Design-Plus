@@ -1,25 +1,5 @@
 # -*- coding: utf-8 -*-
 __title__ = "PAM Building Converter"
-__author__ = "PAM Building UK"
-__doc__ = """Version = 1.0
-Date    = 01.11.2024
-__________________________________________________________________
-Compatibility:
-
-Revit 2023+
-__________________________________________________________________
-Description:
-
-Converts our generic Revit content to our full data families
-__________________________________________________________________
-How-to:
-
--> Click the button
--> Select coupling type and pipe type to convert to
--> Click 'Select Pipework' button
--> Select all elements that you wish to convert and press 'Finish'
-__________________________________________________________________
-"""
 
 # Import required classes and add references to required libraries
 import os

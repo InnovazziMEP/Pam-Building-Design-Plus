@@ -1,24 +1,5 @@
 # -*- coding: utf-8 -*-
 __title__ = "Place Access Doors"
-__author__ = "PAM Building UK"
-__doc__ = """Version = 1.0
-Date    = 01.08.2024
-__________________________________________________________________
-Compatibility:
-
-Revit 2023+
-__________________________________________________________________
-Description:
-
-Places access doors at specified elevation above selected levels.
-__________________________________________________________________
-How-to:
-
--> Click the button
--> Select the pipes on which you want to place access doors and press 'Finish'
--> Input elevation above the levels, then select the levels and press 'Place Access Doors' button
-__________________________________________________________________
-"""
 
 # Add imports
 import os

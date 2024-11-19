@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = 'Batch Save\nFamilies'
+__title__ = 'Batch Save Families'
 
 # Import required classes and add references to required libraries
 import os

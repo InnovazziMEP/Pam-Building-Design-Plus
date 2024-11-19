@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+__title__ = "Select"
+
 import os
 import clr
 import webbrowser

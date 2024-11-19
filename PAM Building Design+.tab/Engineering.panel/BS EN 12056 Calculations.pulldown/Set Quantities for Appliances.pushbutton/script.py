@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Set Foul Drainage Appliances"
+__title__ = "Set Quantities for Appliances"
 
 # Add imports
 import os
