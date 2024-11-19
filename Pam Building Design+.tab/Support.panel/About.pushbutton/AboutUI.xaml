@@ -236,7 +236,7 @@
                 Grid.Row="2"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center">
-                <Run Text="PAM Building Design+"/><Run Language="en-gb"/><Run Text=" | Version 1.0"/>
+                <Run Text="Pam Building Design+"/><Run Language="en-gb"/><Run Text=" | Version 1.0"/>
             </TextBlock>
 
             <!-- Animated Stars Background -->
