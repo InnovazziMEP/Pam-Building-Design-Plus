@@ -3,7 +3,7 @@
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="av"
-        Title="PAM Building Converter" Height="700" Width="600"
+        Title="Pam Building Converter" Height="700" Width="600"
         WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"
         WindowStartupLocation="CenterScreen">
 
@@ -57,7 +57,7 @@
             <Border x:Name="TitleBar" Background="#FF3B4559" Height="30" VerticalAlignment="Top" CornerRadius="8.5,8.5,0,0">
                 <Grid>
                     <!-- Title -->
-                    <TextBlock Text="PAM Building Converter" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
+                    <TextBlock Text="Pam Building Converter" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
                                Foreground="White" FontWeight="Bold"/>
 
                     <!-- Close Button -->
