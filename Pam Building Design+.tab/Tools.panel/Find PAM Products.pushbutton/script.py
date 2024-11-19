@@ -60,4 +60,4 @@ if matching_elements:
         view.IsolateElementsTemporary(element_ids)
 else:
     # Show an alert if no matching elements were found
-    forms.alert("No PAM Building products in this view.", title="No Products Found", warn_icon=True)
+    forms.alert("No Pam Building products in this view.", title="No Products Found", warn_icon=True)
