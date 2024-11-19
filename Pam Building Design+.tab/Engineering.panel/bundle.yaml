@@ -1,0 +1,13 @@
+title:
+  en_us: Engineering
+
+layout:
+  - Access Doors
+  - Converter
+  - Add PAM Couplings
+  - BS EN 12056 Calculations
+
+background:
+  panel: '#EEEEEE'
+  title: '#FED692'
+  slideout: '#EEEEEE'

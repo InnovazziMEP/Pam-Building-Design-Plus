@@ -1,0 +1,362 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="av"
+        Title="PAM Building Converter" Height="700" Width="600"
+        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <!-- BUTTON STYLE-->
+        <Style TargetType="Button">
+            <!--[BUTTON] STYLES-->
+            <Setter Property="TextElement.FontFamily" Value="Source Sans Pro"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <!--[BUTTON] TEMPLATE-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement"
+                                CornerRadius="4"
+                                Background="#FF3B4559"
+                                BorderBrush="#FFDC4405"
+                                BorderThickness="1">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Trigger for IsMouseOver -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background" Value="#FFDC4405"/>
+                                <Setter TargetName="BorderElement" Property="BorderBrush" Value="#FF3B4559"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Define the style for TextBlock -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Source Sans Pro"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#FF3B4559"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+
+        </Style>
+
+    </Window.Resources>
+
+    <Border Background="#FFEBECEE" BorderBrush="#FFDC4405" BorderThickness="1.5" CornerRadius="10,10,10,10">
+        <Grid>
+            <!-- Custom Title Bar -->
+            <Border x:Name="TitleBar" Background="#FF3B4559" Height="30" VerticalAlignment="Top" CornerRadius="8.5,8.5,0,0">
+                <Grid>
+                    <!-- Title -->
+                    <TextBlock Text="PAM Building Converter" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
+                               Foreground="White" FontWeight="Bold"/>
+
+                    <!-- Close Button -->
+                    <Button x:Name="button_close" 
+                            Content="Close" 
+                            HorizontalAlignment="Right" 
+                            VerticalAlignment="Center" 
+                            Margin="0,0,20,0" 
+                            Height="20" Width="54" 
+                            FontSize="10" 
+                            Grid.Column="1">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <Grid Margin="0,30,0,0">
+
+                <!-- Updated Image Source to use web link -->
+                <Image x:Name="logo" Source="https://iili.io/2Kwe7CN.png" 
+                    HorizontalAlignment="Center" VerticalAlignment="Top"
+                    Height="98" Width="166" 
+                    Margin="0,10,0,0" Cursor="Hand"
+                       RenderOptions.BitmapScalingMode="HighQuality"
+                       Stretch="Uniform" 
+                       RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <ScaleTransform x:Name="logoScaleTransform"/>
+                    </Image.RenderTransform>
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="logoScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.1" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="logoScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.1" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Image.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="logoScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="logoScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                </Image>
+
+                <!-- Additional Elements -->
+                <Border BorderBrush="#FF3B4559"
+                        BorderThickness="1"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Height="120" Width="497"
+                        Margin="0,115,0,0" 
+                        CornerRadius="10,10,10,10">
+
+                </Border>
+
+                <!-- Multiple Elements -->
+                <Border BorderBrush="#FF3B4559"
+                        BorderThickness="1" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Height="50" Width="497" 
+                        Margin="0,250,0,0" 
+                        CornerRadius="10,10,10,10" 
+                        Grid.ColumnSpan="2">
+                    <Grid>
+                        <!-- First TextBlock: "Filter/Search" -->
+                        <TextBlock HorizontalAlignment="Left" 
+                                   VerticalAlignment="Center" 
+                                   Margin="20,0,0,0" TextWrapping="Wrap" 
+                                   FontFamily="Source Sans Pro">
+                            <Run Language="en-gb" Text="Filter/Search"/>
+                        </TextBlock>
+
+                        <!-- TextBox filter -->
+                        <TextBox x:Name="textbox_filter" 
+                                 Text="" 
+                                 HorizontalAlignment="Right" 
+                                 VerticalAlignment="Center"
+                                 Height="24"
+                                 Width="360"
+                                 Margin="0,0,20,0" 
+                                 TextWrapping="Wrap"       
+                                 FontSize="14" FontFamily="Source Sans Pro"
+                                 ToolTip="Filter pipe types"
+                                 TextAlignment="Center"
+                                 Grid.Column="1" BorderBrush="#FF3B4559" Foreground="#FF3B4559"/>
+
+                        <!-- Second TextBlock: Search Icon -->
+                        <TextBlock VerticalAlignment="Center" 
+                                Margin="115,0,345,0" Text="🔍" 
+                                Foreground="#FF3B4559" FontSize="16"/>
+                    </Grid>
+                </Border>
+
+                <!-- StackPanel for RadioButton and TextBlock pairs -->
+                <StackPanel
+                    HorizontalAlignment="Center" 
+                    Height="100" Width="397"  
+                    VerticalAlignment="Top" Margin="120,125,50,0">
+
+                    <RadioButton x:Name="EC002" 
+                                 Height="20" 
+                                 Content="EC002 - Ductile Iron Coupling" 
+                                 FontFamily="Source Sans Pro" 
+                                 FontSize="14" 
+                                 Cursor="Hand" 
+                                 IsChecked="True" 
+                                 BorderBrush="#FF3B4559" Foreground="#FF3B4559">
+                        <RadioButton.ToolTip>
+                            <TextBlock TextWrapping="Wrap">
+                                These couplings are for gravity applications the Ensign systems are jointed by
+                                <LineBreak/>
+                                unique two piece ductile iron couplings, which offer high performance and are
+                                <LineBreak/>
+                                quick and easy to install. These couplings will provide a level of pressure which is
+                                <LineBreak/>
+                                based on accidental static pressure.
+                            </TextBlock>
+                        </RadioButton.ToolTip>
+                    </RadioButton>
+
+                    <TextBlock Height="40" 
+                               FontSize="12">
+                        <Run Text="Two "/><Run Language="en-gb" Text="P"/><Run Text="iece "/><Run Language="en-gb" Text="D"/><Run Text="uctile "/><Run Language="en-gb" Text="I"/><Run Text="ron "/><Run Language="en-gb" Text="C"/><Run Text="oupling. For sizes from 50-"/><Run Text="3"/><Run Text="00mm."/></TextBlock>
+
+                    <RadioButton x:Name="EC002NG" 
+                                 Height="20" 
+                                 Content="EC002NG - RAPID S NG Coupling" 
+                                 FontFamily="Source Sans Pro" 
+                                 FontSize="14" 
+                                 Cursor="Hand" 
+                                 IsChecked="False" 
+                                 BorderBrush="#FF3B4559" Foreground="#FF3B4559">
+                        <RadioButton.ToolTip>
+                            <TextBlock TextWrapping="Wrap">
+                                Ensign soil stainless steel single piece, single bolt Rapid NG coupling assembled
+                                <LineBreak/>
+                                utilising a captive socket cap screw driven by a 6mm allen key and includes an
+                                <LineBreak/>
+                                EPDM gasket as standard. The cap screw is completely tightened leaving no gap
+                                <LineBreak/>
+                                and assembled in seconds.
+                            </TextBlock>
+                        </RadioButton.ToolTip>
+                    </RadioButton>
+
+                    <TextBlock Height="20"
+                               FontSize="12">
+                        <Run Text="Stainless "/><Run Text="S"/><Run Text="teel Rapid S NG"/><Run Text=" "/><Run Language="en-gb" Text="C"/><Run Text="oupling. For sizes from 50-"/><Run Text="3"/><Run Text="00mm."/></TextBlock>
+
+                </StackPanel>
+
+                <!-- Image with Scaling -->
+                <Image Source="https://iili.io/dGNlCmP.png"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" 
+                        Height="40" Width="40" 
+                        Margin="75,125,0,0" 
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="Uniform"
+                        RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <ScaleTransform x:Name="Coupling2ScaleTransform"/>
+                    </Image.RenderTransform>
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling2ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.3" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling2ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.3" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Image.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling2ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling2ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                </Image>
+                <!-- Image with Scaling -->
+                <Image Source="https://iili.io/dGNSktn.png"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"  
+                        Height="40" Width="40" 
+                        Margin="75,185,0,0"  
+                        RenderOptions.BitmapScalingMode="HighQuality"
+                        Stretch="Uniform"
+                        RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <ScaleTransform x:Name="Coupling3ScaleTransform"/>
+                    </Image.RenderTransform>
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling3ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.3" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling3ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.3" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Image.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling3ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleX"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="Coupling3ScaleTransform"
+                                                        Storyboard.TargetProperty="ScaleY"
+                                                        To="1.0" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                </Image>
+
+                <!-- Run Button -->
+                <Button x:Name="button_run" 
+                        Content="Select Pipework" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Bottom" 
+                        Margin="0,0,0,40" 
+                        Height="26" Width="120" 
+                        FontSize="14" 
+                        Grid.Column="1">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+
+                <!-- Multiple Elements -->
+                <Border BorderBrush="#FF3B4559" 
+                        BorderThickness="1" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Height="270" Width="497"
+                        Margin="0,315,0,0" 
+                        CornerRadius="10,10,10,10" 
+                        Grid.ColumnSpan="2">
+                    <Grid>
+                        <!-- First TextBlock -->
+                        <TextBlock HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   Height="20" Width="110" 
+                                   Margin="20,10,0,0" 
+                                   TextWrapping="Wrap"><Run Language="en-gb" Text="Convert To"/></TextBlock>
+
+                        <!-- ListBox listing pipetypes -->
+                        <ListBox x:Name="list_pipetypes" 
+                                Margin="0,40,0,0" 
+                                Height="210" Width="457" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment= "Top" 
+                                SelectionMode="Single" Cursor="Hand" Foreground="#FF3B4559" BorderBrush="#FF3B4559">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <RadioButton Margin="5" IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                    Cursor="Hand" 
+                                                    GroupName="PipeTypesGroup">
+                                            <ContentPresenter Content="{Binding Name}"/>
+                                        </RadioButton>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
