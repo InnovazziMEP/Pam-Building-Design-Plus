@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Add Pam Building Couplings"
+__title__ = "Add Pam Couplings"
 
 # Import required classes and add references to required libraries
 import os
