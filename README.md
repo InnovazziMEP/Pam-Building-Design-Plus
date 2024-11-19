@@ -1,2 +1,2 @@
-# PAM Building Design Plus
+# Pam Building Design Plus
  PAM Building's pyRevit extension with tools for public health engineering
