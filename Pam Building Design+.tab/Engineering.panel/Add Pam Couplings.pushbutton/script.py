@@ -341,7 +341,7 @@ else:
                     reversed_matching_families = sorted_matching_families[::-1]
 
                     # Begin a transaction group
-                    with TransactionGroup(doc, "Add PAM Couplings") as group:
+                    with TransactionGroup(doc, __title__) as group:
                         group.Start()
 
                         # Transaction to add rules to routing preferences
