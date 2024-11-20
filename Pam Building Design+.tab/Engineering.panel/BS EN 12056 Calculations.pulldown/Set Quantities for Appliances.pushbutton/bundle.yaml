@@ -2,7 +2,7 @@ title:
   en_us: Set Quantities for Appliances
 
 tooltip:
-  en_us: Sets the number of appliances for sizing connections
+  en_us: Sets the number of appliances for calculation connections
 
 context:
   any:
