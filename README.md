@@ -11,11 +11,12 @@
 For more info about pyRevit please check [GitHub](https://github.com/pyrevitlabs/pyRevit) or the website [here](https://www.pyrevitlabs.io/).
 
 ---
-### Pam Building Design+ is now part of pyRevit's registered extensions which means is quick and easy to install
-#### ℹ️ How to install
+### Pam Building $\textsf{\color{#dc4405}{Design+}}$ is now part of pyRevit's registered extensions which means is quick and easy to install
 
-    ✅ Install pyRevit  
-    ✅ Go to Extensions menu  
-    ✅ Select Pam Building Design+ from the list
-    ✅ Click on Install button
+### $\textsf {ⓘ\ }$ $\textsf{\color{#dc4405}{How\ to\ install:}}$
+- Install pyRevit  
+- Go to Extensions menu  
+- Select Pam Building Design+ from the list
+- Click on Install button
 ---
+
