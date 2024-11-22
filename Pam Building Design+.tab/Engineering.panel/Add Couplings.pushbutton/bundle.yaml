@@ -1,8 +1,8 @@
 title:
-  en_us: Set Quantities for Appliances
+  en_us: Add Couplings
 
 tooltip:
-  en_us: Sets the number of appliances for calculation connections
+  en_us: Places Pam Building couplings every 3m on selected pipes
 
 context:
   any:
@@ -10,9 +10,10 @@ context:
   - active-elevation-view
   - active-section-view
   - active-3d-view
-  
+
 # bundle author
 author: Pam Building UK
 
 # minimium supported Revit version
 min_revit_version: 2022
+

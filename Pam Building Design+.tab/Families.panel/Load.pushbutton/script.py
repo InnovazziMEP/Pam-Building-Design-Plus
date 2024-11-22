@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = 'Batch Load Families'
+__title__ = 'Load Families'
 
 # Add references to required Revit API libraries and import required classes from Revit API and pyRevit
 import clr

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Pam Building Converter"
+__title__ = "Content Converter"
 
 # Import required classes and add references to required libraries
 import os

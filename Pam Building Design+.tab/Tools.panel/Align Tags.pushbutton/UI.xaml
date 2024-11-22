@@ -78,7 +78,7 @@
             <Grid Margin="0,30,0,0">
 
                 <!-- Updated Image Source to use web link -->
-                <Image x:Name="logo" Source="https://iili.io/2Kwe7CN.png" 
+                <Image x:Name="logo" Source="https://iili.io/27tnOCB.md.png" 
                     HorizontalAlignment="Center" VerticalAlignment="Top"
                     Height="98" Width="166" 
                     Margin="0,10,0,0" Cursor="Hand"

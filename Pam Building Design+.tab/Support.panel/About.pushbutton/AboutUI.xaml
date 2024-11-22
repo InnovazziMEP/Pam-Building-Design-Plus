@@ -55,14 +55,8 @@
             BorderThickness="4"
             Padding="5">
 
-        <Grid>
+        <Grid Background="#FFEBECEE">
             <!-- Background Color -->
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="#FF3B4559" Offset="0" />
-                    <GradientStop Color="#FFEBECEE" Offset="0.85" />
-                </LinearGradientBrush>
-            </Grid.Background>
             <!-- Background Color -->
 
             <!-- ROW DEFINITIONS-->
@@ -214,7 +208,6 @@
         </Image>
     </Hyperlink>
                         </TextBlock>
-                        <TextBlock/>
                         <!-- Made by -->
                         <TextBlock 
                             FontSize="14" 
@@ -230,7 +223,7 @@
             <TextBlock 
                 Grid.Column="1"
                 FontSize="14" 
-                Foreground="#FFFFFF"
+                Foreground="#FF3B4559"
                 Opacity="0.8"
                 TextWrapping="Wrap"
                 Grid.Row="2"
@@ -238,75 +231,6 @@
                 HorizontalAlignment="Center">
                 <Run Text="Pam Building Design+"/><Run Language="en-gb"/><Run Text=" | Version 1.0"/>
             </TextBlock>
-
-            <!-- Animated Stars Background -->
-            <Canvas Grid.Row="1">
-                <Canvas.Resources>
-                    <!-- Define the star animation storyboards -->
-                    <Storyboard x:Key="flashingStars">
-                        <DoubleAnimation 
-                            Storyboard.TargetProperty="Opacity" 
-                            From="0.3" To="1.0" 
-                            Duration="0:0:3" 
-                            AutoReverse="True" 
-                            RepeatBehavior="Forever" />
-                    </Storyboard>
-
-                    <Storyboard x:Key="movingStars">
-                        <DoubleAnimation 
-                            Storyboard.TargetProperty="RenderTransform.X" 
-                            From="0" To="1" 
-                            Duration="0:0:3" 
-                            AutoReverse="True" 
-                            RepeatBehavior="Forever" />
-                        <DoubleAnimation 
-                            Storyboard.TargetProperty="RenderTransform.Y" 
-                            From="0" To="5" 
-                            Duration="0:0:3" 
-                            AutoReverse="True" 
-                            RepeatBehavior="Forever" />
-                    </Storyboard>
-
-                    <!-- Star Style -->
-                    <Style x:Key="starStyle" TargetType="Ellipse">
-                        <Setter Property="Fill" Value="White"/>
-                        <Setter Property="Opacity" Value="0.7"/>
-                        <Setter Property="Width" Value="3"/>
-                        <Setter Property="Height" Value="3"/>
-                        <Setter Property="Canvas.Left" Value="0"/>
-                        <Setter Property="Canvas.Top" Value="0"/>
-                        <Setter Property="RenderTransform">
-                            <Setter.Value>
-                                <TranslateTransform/>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <EventTrigger RoutedEvent="Ellipse.Loaded">
-                                <BeginStoryboard Storyboard="{StaticResource flashingStars}" />
-                                <BeginStoryboard Storyboard="{StaticResource movingStars}" />
-                            </EventTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Canvas.Resources>
-
-                <!-- Stars -->
-                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="25" Canvas.Top="50"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="50" Canvas.Top="100"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="565" Canvas.Top="180"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="30" Canvas.Top="200"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="150" Canvas.Top="250"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="80" Canvas.Top="305"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="120" Canvas.Top="350"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="2" Height="2" Canvas.Left="300" Canvas.Top="325"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="3" Height="3" Canvas.Left="400" Canvas.Top="275"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="300" Canvas.Top="125"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="450" Canvas.Top="150"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="510" Canvas.Top="150"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="540" Canvas.Top="50"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="475" Canvas.Top="330"/>
-                <Ellipse Style="{StaticResource starStyle}" Width="4" Height="4" Canvas.Left="540" Canvas.Top="250"/>
-            </Canvas>
-
         </Grid>
     </Border>
 </Window>

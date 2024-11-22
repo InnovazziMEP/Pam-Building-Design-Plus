@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Set Quantities for Appliances"
+__title__ = "Set Number of Appliances"
 
 # Add imports
 import os
@@ -36,23 +36,23 @@ class SelectionFilter(ISelectionFilter):
 def select_elements():
     while True: # Loop to keep the selection filter active
         try:
-            with forms.WarningBar(title='Select sizing connections and press Finish when complete'):
+            with forms.WarningBar(title='Select calculation connections and press Finish when complete'):
                 # Create an instance of SelectionFilter
                 filter = SelectionFilter()
 
                 # Prompt user to select elements
-                selected_ids = uidoc.Selection.PickObjects(ObjectType.Element, filter, 'Select Foul Drainage Sizing Connections')
+                selected_ids = uidoc.Selection.PickObjects(ObjectType.Element, filter, 'Select Foul Drainage Calculation Connections')
                 selected_elements = [doc.GetElement(id.ElementId) for id in selected_ids]
 
             if not selected_ids:  # No pipe fittings selected or operation cancelled
-                forms.alert('No elements have been selected', title='Select Sizing Connections')
+                forms.alert('No elements have been selected', title='Select Calculation Connections')
                 continue
             else:
                 # Pass the selected elements to the window
                 show_window(selected_elements)
 
         except OperationCanceledException:
-            forms.alert('User cancelled selection', title='Select Sizing Connections')
+            forms.alert('User cancelled selection', title='Select Calculation Connections')
         break
 
 def show_window(selected_elements):

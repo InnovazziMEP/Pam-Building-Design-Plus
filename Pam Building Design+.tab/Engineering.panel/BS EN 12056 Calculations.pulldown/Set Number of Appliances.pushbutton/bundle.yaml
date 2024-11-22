@@ -1,23 +1,18 @@
 title:
-  en_us: Find Pam Products
-  
+  en_us: Set Number of Appliances
+
 tooltip:
-  en_us: Finds and isolates all Pam Building products in the active view
+  en_us: Sets the number of appliances for calculation connections
 
 context:
   any:
-  - active-plan-view
   - active-floor-plan
-  - active-rcp-plan
-  - active-structural-plan
-  - active-area-plan
   - active-elevation-view
   - active-section-view
   - active-3d-view
-
+  
 # bundle author
 author: Pam Building UK
 
 # minimium supported Revit version
 min_revit_version: 2022
-

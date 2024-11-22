@@ -3,7 +3,7 @@
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="av"
-        Title="Set Quantities for Appliances" Height="760" Width="600"
+        Title="Set Number of Appliances" Height="760" Width="600"
         WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"
         WindowStartupLocation="CenterScreen">
 
@@ -57,7 +57,7 @@
             <Border x:Name="TitleBar" Background="#FF3B4559" Height="30" VerticalAlignment="Top" CornerRadius="8.5,8.5,0,0">
                 <Grid>
                     <!-- Title -->
-                    <TextBlock Text="Set Quantities for Appliances" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
+                    <TextBlock Text="Set Number of Appliances" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
                                Foreground="White" FontWeight="Bold"/>
 
                     <!-- Close Button -->
@@ -79,7 +79,7 @@
             <Grid Margin="0,30,0,0">
 
                 <!-- Updated Image Source to use web link -->
-                <Image x:Name="logo" Source="https://iili.io/2Kwe7CN.png" 
+                <Image x:Name="logo" Source="https://iili.io/27tnOCB.md.png" 
                     HorizontalAlignment="Center" VerticalAlignment="Top"
                     Height="98" Width="166" 
                     Margin="0,10,0,0" Cursor="Hand"

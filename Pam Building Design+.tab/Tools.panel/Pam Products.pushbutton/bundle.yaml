@@ -1,12 +1,16 @@
 title:
-  en_us: Pam Building Converter
-
+  en_us: Pam Products
+  
 tooltip:
-  en_us: Converts our generic Revit content to our full data families
+  en_us: Finds and isolates all Pam Building products in the active view
 
 context:
   any:
+  - active-plan-view
   - active-floor-plan
+  - active-rcp-plan
+  - active-structural-plan
+  - active-area-plan
   - active-elevation-view
   - active-section-view
   - active-3d-view
