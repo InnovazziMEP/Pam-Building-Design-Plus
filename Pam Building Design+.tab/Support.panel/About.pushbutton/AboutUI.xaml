@@ -90,7 +90,7 @@
                                TextDecorations="None"
                                RequestNavigate="Hyperlink_RequestNavigate">
                         <Image x:Name="logo"
-                               Source="https://iili.io/270XAP9.md.png"
+                               Source="https://iili.io/27tnOCB.md.png"
                                Height="98" Width="166"
                                Margin="0,0,0,0"
                                RenderOptions.BitmapScalingMode="HighQuality"
