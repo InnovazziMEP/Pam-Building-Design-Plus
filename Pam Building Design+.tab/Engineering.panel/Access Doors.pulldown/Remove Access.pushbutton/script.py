@@ -17,10 +17,7 @@ from pyrevit import revit, forms
 uidoc = revit.uidoc
 doc = revit.doc
 
-# Additional variables
-connected_pipes = set()  # Set to keep track of pipes being connected
-
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SELECTION FILTER
+# Selection Filter
 class FittingsSelectionFilter(ISelectionFilter):
     """Filter class to allow selection of pipe fittings only."""
     def AllowElement(self, element):
@@ -85,7 +82,8 @@ def getConnectTo(connector):
 def main():
     connector_data = []  # List to store connector data
     selected_fitting_ids = []  # List to store selected fittings' IDs
-    pipes_to_delete = []  # Standard Python list for pipes to delete
+    pipes_to_delete = []  # List to store pipes to delete
+    connected_pipes = set()  # Track connected pipes to ensure they're not deleted
 
     while True:
         try:
@@ -102,13 +100,10 @@ def main():
             # Collecting the pipes to be connected
             for element in selected_elements:
                 connectors = getConnectors(element)
-
                 for connector in connectors:
-                    # Retrieve connected connectors
                     connected_connectors = getConnectedConnectors(connector)
                     if connected_connectors:
                         for connected in connected_connectors:
-                            # Only append connected pipes
                             if isinstance(connected.Owner, Pipe):
                                 connector_data.append((connector.Owner.Id, connected.Owner.Id))  # Store pipe pairs
 
@@ -117,7 +112,6 @@ def main():
 
             # Merging pipe pairs into groups
             for pipe1, pipe2 in connector_data:
-                group_found = False
                 groups_to_merge = []
 
                 # Check if any existing group contains either pipe1 or pipe2
@@ -132,11 +126,9 @@ def main():
                     for group in groups_to_merge:
                         merged_group.update(group)
                         pipe_groups.remove(group)  # Remove the old groups that were merged
-
                     pipe_groups.append(merged_group)  # Add the merged group
                 else:
-                    # If no group contains these pipes, create a new group
-                    pipe_groups.append(set([pipe1, pipe2]))
+                    pipe_groups.append(set([pipe1, pipe2]))  # Create a new group if no group contains these pipes
 
             # Start a transaction group to remove fittings and connect pipes
             with TransactionGroup(doc, __title__) as tg:
@@ -148,7 +140,6 @@ def main():
                 # Start a transaction to remove the fittings
                 with Transaction(doc, "Remove Fittings") as t1:
                     t1.Start()
-                    # Remove the selected fittings
                     for fitting in selected_elements:
                         RemoveUnionFitting(fitting)
                     t1.Commit()  # Commit the fitting removal transaction
@@ -161,7 +152,6 @@ def main():
                     for group in pipe_groups:
                         if len(group) >= 2:  # Ensure there are at least 2 pipes to connect
                             most_distant_connectors = getMostDistantConnectors(group)
-
                             if most_distant_connectors:
                                 conA, conB = most_distant_connectors
                                 pipeA = conA.Owner
@@ -179,14 +169,13 @@ def main():
 
                                 connected_pipes.add(pipeA.Id)  # Track connected pipe
                                 connected_pipes.add(conB.Owner.Id)  # Track connected pipe
-
                     t2.Commit()  # Commit the connection transaction
 
                 # Collect pipes to delete, ensuring we don't include connected pipes or selected fittings
                 for group in pipe_groups:
                     for pipe in group:
-                        if pipe not in connected_pipes and pipe not in selected_fitting_ids:  # Only add pipes not being connected or selected fittings
-                            pipes_to_delete.append(pipe)
+                        if pipe not in connected_pipes and pipe not in selected_fitting_ids:
+                            pipes_to_delete.append(pipe)  # Only add pipes not being connected or selected fittings
 
                 # After connecting pipes, check for any additional redundant pipes
                 for pipe_id in connected_pipes:
@@ -196,8 +185,8 @@ def main():
                         connectors = getConnectors(connected_pipe)
                         # Check if the connected pipe has other connected elements
                         for connector in connectors:
-                            if not getConnectedConnectors(connector):  # If it has no other connected elements
-                                pipes_to_delete.append(connected_pipe.Id)
+                            if not getConnectedConnectors(connector):
+                                pipes_to_delete.append(connected_pipe.Id)  # If it has no other connected elements, mark it for deletion
 
                 # Delete the redundant pipes after joining
                 if pipes_to_delete:
@@ -207,7 +196,17 @@ def main():
                             # Check if the element still exists in the document before deleting
                             pipe_to_delete = doc.GetElement(pipe_id)
                             if pipe_to_delete is not None:
-                                doc.Delete(pipe_id)
+                                # Enhanced check to ensure pipe has no connected connectors
+                                connectors = getConnectors(pipe_to_delete)
+                                redundant = True
+                                for connector in connectors:
+                                    if getConnectedConnectors(connector):
+                                        redundant = False
+                                        break
+                                if redundant:
+                                    doc.Delete(pipe_id)
+                                else:
+                                    pass  # Pipe is not deleted as it still has connections
                         t3.Commit()
 
                 tg.Assimilate()  # Commit the entire transaction group
@@ -233,3 +232,4 @@ def main():
 
 # Run the main selection function
 main()
+
