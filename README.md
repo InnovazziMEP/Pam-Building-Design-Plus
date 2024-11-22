@@ -1,4 +1,7 @@
-![LOGO_VERTICAL_BLANC_ROUGE BIM DESIGN+](https://github.com/user-attachments/assets/ef9217fc-10eb-45f2-8374-31f6a313ce07)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/ef9217fc-10eb-45f2-8374-31f6a313ce07">
+  <img alt="Pam Building Design+ Logo" src="https://github.com/user-attachments/assets/e11aa75a-427a-4089-a90a-7f454751c593">
+</picture>
 
 ## Pam Building's pyRevit extension with tools for public health engineering
 
