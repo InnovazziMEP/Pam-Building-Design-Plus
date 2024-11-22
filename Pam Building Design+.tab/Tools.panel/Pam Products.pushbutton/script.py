@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__title__ = "Find Pam Products"
+__title__ = "Pam Products"
 
 # Import required classes and add references to required libraries
 import clr
