@@ -5,7 +5,7 @@
 
 ## Pam Building's pyRevit extension with tools for public health engineering
 
-![Overview](https://github.com/user-attachments/assets/0bbfcb5f-c2c5-4247-836a-2e72c97afe90)
+![Design+ Overview](https://github.com/user-attachments/assets/8d011fd1-9cf4-4bb2-9658-e7657e58b8f6)
 
 ---
 ### What is pyRevit❔ 
