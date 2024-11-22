@@ -173,7 +173,7 @@
     <Hyperlink NavigateUri="mailto:technical.pam@saint-gobain.com" RequestNavigate="Hyperlink_RequestNavigate"
                TextDecorations="None">
         <Image x:Name="Email"
-               Source="https://iili.io/27VNhcQ.md.png"
+               Source="https://iili.io/2746KRn.md.png"
                Height="100" Width="100"
                RenderOptions.BitmapScalingMode="HighQuality"
                Stretch="Uniform">
