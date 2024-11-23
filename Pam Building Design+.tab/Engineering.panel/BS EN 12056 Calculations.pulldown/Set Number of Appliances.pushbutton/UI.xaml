@@ -977,7 +977,7 @@
 
                 <!-- Run Button -->
                 <Button x:Name="button_run" 
-                        Content="Set Quantities" 
+                        Content="Set Appliances" 
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Bottom" 
                         Margin="0,0,0,25" 
