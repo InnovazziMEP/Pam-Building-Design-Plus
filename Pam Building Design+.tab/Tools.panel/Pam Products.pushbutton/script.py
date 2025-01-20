@@ -29,7 +29,7 @@ for instance in family_instances:
     manufacturer_param = family_symbol.get_Parameter(BuiltInParameter.ALL_MODEL_MANUFACTURER)
     if manufacturer_param:
         manufacturer_value = manufacturer_param.AsString()
-        if manufacturer_value and 'PAM Building' in manufacturer_value:
+        if manufacturer_value and 'Pam Building' in manufacturer_value:
             matching_elements.append(instance)
 
 # Collect all pipe types by filtering for types within the PipeCurves category
@@ -42,7 +42,7 @@ for pipe_type in pipe_types:
         manufacturer_param = pipe_type.get_Parameter(BuiltInParameter.ALL_MODEL_MANUFACTURER)
         if manufacturer_param:
             manufacturer_value = manufacturer_param.AsString()
-            if manufacturer_value and 'PAM Building' in manufacturer_value:
+            if manufacturer_value and 'Pam Building' in manufacturer_value:
                 # Find all pipe instances of this type
                 pipe_instances = FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_PipeCurves).WhereElementIsNotElementType().ToElements()
                 for pipe in pipe_instances:

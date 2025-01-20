@@ -204,45 +204,45 @@ del pipe_types_dict
 # Define mapping for the coupling family based on selected coupling and family type
 coupling_mapping = {
     'DN50x50': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN50x50"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN50x50"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN50x50"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN50x50"),
     },
     'DN70x70': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN70x70"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN70x70"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN70x70"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN70x70"),
     },
     'DN100x100': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN100x100"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN100x100"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN100x100"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN100x100"),
     },
     'DN125x125': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN125x125"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN125x125"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN125x125"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN125x125"),
     },
     'DN150x150': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN150x150"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN150x150"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN150x150"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN150x150"),
     },
     'DN200x200': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN200x200"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN200x200"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN200x200"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN200x200"),
     },
     'DN250x250': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN250x250"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN250x250"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN250x250"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN250x250"),
     },
     'DN300x300': {
-        'EC002 - Ductile Iron Coupling': ("SGPAMUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN300x300"),
-        'EC002NG - RAPID S NG Coupling': ("SGPAMUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN300x300"),
+        'EC002 - Ductile Iron Coupling': ("PAMBUILDINGUK_ES_Two-Piece Ductile Iron Coupling_EC002_Union", "DN300x300"),
+        'EC002NG - RAPID S NG Coupling': ("PAMBUILDINGUK_ES_RAPID S NG Coupling_EC002NG_Union", "DN300x300"),
     },
     'DN400x400': {
-        None: ("SGPAMUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN400x400_EC002HP"),
+        None: ("PAMBUILDINGUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN400x400_EC002HP"),
     },
     'DN500x500': {
-        None: ("SGPAMUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN500x500_EC002HP"),
+        None: ("PAMBUILDINGUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN500x500_EC002HP"),
     },
     'DN600x600': {
-        None: ("SGPAMUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN600x600_EC002HP"),
+        None: ("PAMBUILDINGUK_ES_High Performance Coupling Stainless Steel_EC002HP&EC002HP-G_Union", "DN600x600_EC002HP"),
     }
 }
 
@@ -256,12 +256,12 @@ def get_family_and_type(type_name, selected_coupling):
 # Define mapping for the coupling family based on selected coupling and description parameter
 description_mapping = {
     'Access Pipe Round Door': {
-        'EC002 - Ductile Iron Coupling': "SGPAMUK_ES_Access Pipe Round Door_AF014_DI",
-        'EC002NG - RAPID S NG Coupling': "SGPAMUK_ES_Access Pipe Round Door_AF014_NG",
+        'EC002 - Ductile Iron Coupling': "PAMBUILDINGUK_ES_Access Pipe Round Door_AF014_DI",
+        'EC002NG - RAPID S NG Coupling': "PAMBUILDINGUK_ES_Access Pipe Round Door_AF014_NG",
     },
     'Long Radius Bend': {
-        'EC002 - Ductile Iron Coupling': "SGPAMUK_ES_Long Radius Bend_EF02L_DI",
-        'EC002NG - RAPID S NG Coupling': "SGPAMUK_ES_Long Radius Bend_EF02L_DI",
+        'EC002 - Ductile Iron Coupling': "PAMBUILDINGUK_ES_Long Radius Bend_EF02L_DI",
+        'EC002NG - RAPID S NG Coupling': "PAMBUILDINGUK_ES_Long Radius Bend_EF02L_DI",
     }
 }
 
@@ -329,245 +329,245 @@ try:
                 # Pipe Fittings
                 if "45° Single Long Arm Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_45° Single Long Arm Branch_EF008_DI"
+                        family_name = "PAMBUILDINGUK_ES_45° Single Long Arm Branch_EF008_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_45° Single Long Arm Branch_EF008_NG"
+                        family_name = "PAMBUILDINGUK_ES_45° Single Long Arm Branch_EF008_NG"
                 elif "88° Long Radius Door Back Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_88° Long Radius Door Back Bend_EF05L_DI"
+                        family_name = "PAMBUILDINGUK_ES_88° Long Radius Door Back Bend_EF05L_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_88° Long Radius Door Back Bend_EF05L_NG"
+                        family_name = "PAMBUILDINGUK_ES_88° Long Radius Door Back Bend_EF05L_NG"
                 elif "88° Medium Radius Door Back Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_88° Medium Radius Door Back Bend_EF05M_DI"
+                        family_name = "PAMBUILDINGUK_ES_88° Medium Radius Door Back Bend_EF05M_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_88° Medium Radius Door Back Bend_EF05M_NG"
+                        family_name = "PAMBUILDINGUK_ES_88° Medium Radius Door Back Bend_EF05M_NG"
                 elif "88º Short Radius Door Back Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_88° Short Radius Door Back Bend_EF005_DI"
+                        family_name = "PAMBUILDINGUK_ES_88° Short Radius Door Back Bend_EF005_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_88° Short Radius Door Back Bend_EF005_NG"
+                        family_name = "PAMBUILDINGUK_ES_88° Short Radius Door Back Bend_EF005_NG"
                 elif "88° Vented Bend Axial" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_88° Vented Bend_EF002AB_DI"
+                        family_name = "PAMBUILDINGUK_ES_88° Vented Bend_EF002AB_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_88° Vented Bend_EF002AB_NG"
+                        family_name = "PAMBUILDINGUK_ES_88° Vented Bend_EF002AB_NG"
                 elif "88° Vented Bend Radial" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_88° Vented Bend_EF002RB_DI"
+                        family_name = "PAMBUILDINGUK_ES_88° Vented Bend_EF002RB_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_88° Vented Bend_EF002RB_NG"
+                        family_name = "PAMBUILDINGUK_ES_88° Vented Bend_EF002RB_NG"
                 elif "Access Pipe Rectangular Door" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Access Pipe Rect Door_EF015_DI"
+                        family_name = "PAMBUILDINGUK_ES_Access Pipe Rect Door_EF015_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Access Pipe Rect Door_EF015_NG" 
+                        family_name = "PAMBUILDINGUK_ES_Access Pipe Rect Door_EF015_NG" 
                 elif "Access Pipe Round Door" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Access Pipe Round Door_AF014_DI"
+                        family_name = "PAMBUILDINGUK_ES_Access Pipe Round Door_AF014_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Access Pipe Round Door_AF014_NG"
+                        family_name = "PAMBUILDINGUK_ES_Access Pipe Round Door_AF014_NG"
                 elif "Air~Wave Vent Cowl" in description_param:
-                        family_name = "SGPAMUK_ES_Air Wave Vent Cowl_EF075"
+                        family_name = "PAMBUILDINGUK_ES_Air Wave Vent Cowl_EF075"
                 elif "Blank End Drilled and Taped" in description_param:
-                        family_name = "SGPAMUK_ES_Blank End Drilled And Taped_EF071T"
+                        family_name = "PAMBUILDINGUK_ES_Blank End Drilled And Taped_EF071T"
                 elif "Blank End Push-Fit Connection" in description_param:
-                        family_name = "SGPAMUK_ES_Blank End Push Fit Connection_EF077"
+                        family_name = "PAMBUILDINGUK_ES_Blank End Push Fit Connection_EF077"
                 elif "Blank End Push-Fit" in description_param:
-                        family_name = "SGPAMUK_ES_Blank End Push Fit_EF071"
+                        family_name = "PAMBUILDINGUK_ES_Blank End Push Fit_EF071"
                 elif "Blank End" in description_param:
-                    family_name = "SGPAMUK_ES_Blank End_EF070"
+                    family_name = "PAMBUILDINGUK_ES_Blank End_EF070"
                 elif "Corner Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Corner Branch_EF035_DI"
+                        family_name = "PAMBUILDINGUK_ES_Corner Branch_EF035_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Corner Branch_EF035_NG"
+                        family_name = "PAMBUILDINGUK_ES_Corner Branch_EF035_NG"
                 elif "Corner Radius Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Corner Radius Branch_EF035R_DI"
+                        family_name = "PAMBUILDINGUK_ES_Corner Radius Branch_EF035R_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Corner Radius Branch_EF035R_NG"
+                        family_name = "PAMBUILDINGUK_ES_Corner Radius Branch_EF035R_NG"
                 elif "Long Tail Double Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Bend_EF054_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Bend_EF054_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Bend_EF054_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Bend_EF054_NG"
                 elif "Double Boss with Bosses Opposed at 88º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_AF091_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_AF091_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_AF091_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_AF091_NG"
                 elif "Double Boss with Bosses at 90º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_AF092_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_AF092_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_AF092_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_AF092_NG"
                 elif "Double Boss with Drilled/Tapped 50mm Bosses Opposed at 88º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_EF091T_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_EF091T_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_EF091T_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_EF091T_NG"
                 elif "Double Boss with Drilled/Tapped 50mm Bosses at 90º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_EF092T_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_EF092T_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Boss_EF092T_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Boss_EF092T_NG"
                 elif "Double Branch Long Tail Radius Curve" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch Long Tail Radius Curve_EF097_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch Long Tail Radius Curve_EF097_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch Long Tail Radius Curve_EF097_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch Long Tail Radius Curve_EF097_NG"
                 elif "Double Radius Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch Radius Curve_AF010R_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch Radius Curve_AF010R_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch Radius Curve_AF010R_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch Radius Curve_AF010R_NG"
                 elif "Double Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch_AF010_DI"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch_AF010_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Double Branch_AF010_NG"
+                        family_name = "PAMBUILDINGUK_ES_Double Branch_AF010_NG"
                 elif "Expansion Plug" in description_param:
-                    family_name = "SGPAMUK_ES_Expansion Plug_EF074"
+                    family_name = "PAMBUILDINGUK_ES_Expansion Plug_EF074"
                 elif "Long Radius Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Radius Bend_EF02L_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Radius Bend_EF02L_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Radius Bend_EF02L_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Radius Bend_EF02L_NG"
                 elif "Long Tail Bend" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Bend_EF055_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Bend_EF055_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Bend_EF055_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Bend_EF055_NG"
                 elif "Long Tail Corner Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Corner Branch_EF036_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Corner Branch_EF036_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Corner Branch_EF036_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Corner Branch_EF036_NG"
                 
                 elif "Long Tail Double Boss - Bosses Opposed at 88º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Double Boss_EF091LT_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Double Boss_EF091LT_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Double Boss_EF091LT_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Double Boss_EF091LT_NG"
                 elif "Long Tail Double Boss - Bosses at 90º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Double Boss_EF092LT_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Double Boss_EF092LT_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Double Boss_EF092LT_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Double Boss_EF092LT_NG"
                 
                 elif "Long Tail Single Boss at 88º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Single Boss_EF090LT_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Single Boss_EF090LT_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Single Boss_EF090LT_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Single Boss_EF090LT_NG"
                 elif "Long Tail Single Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Single Branch_EF056_DI"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Single Branch_EF056_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Long Tail Single Branch_EF056_NG"
+                        family_name = "PAMBUILDINGUK_ES_Long Tail Single Branch_EF056_NG"
                 elif "Manifold Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector_EF094_DI"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector_EF094_NG"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_NG"
                 elif "Corner Multi-Waste Manifold Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector Corner_EF099_DI"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector Corner_EF099_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector Corner_EF099_NG"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector Corner_EF099_NG"
                 elif "Multi-Waste Manifold Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector_EF095_DI"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF095_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Manifold Connector_EF095_NG"
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF095_NG"
                 elif "Push-Fit Movement Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Movement Connector_EF058_DI"
+                        family_name = "PAMBUILDINGUK_ES_Movement Connector_EF058_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Movement Connector_EF058_NG"
+                        family_name = "PAMBUILDINGUK_ES_Movement Connector_EF058_NG"
                 
                 #elif "Rodding Branch" in description_param:
                     #if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        #family_name = "SGPAMUK_ES_Rodding Branch_EF009_DI"
+                        #family_name = "PAMBUILDINGUK_ES_Rodding Branch_EF009_DI"
                     #elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        #family_name = "SGPAMUK_ES_Rodding Branch_EF009_NG"
+                        #family_name = "PAMBUILDINGUK_ES_Rodding Branch_EF009_NG"
                 
                 # Determine family based on description and diameter
                 elif "Short Radius Bend" in description_param and converted_instance_diameter_param_value > 300:
-                    family_name = "SGPAMUK_ES_Bend_EF002_HP"
+                    family_name = "PAMBUILDINGUK_ES_Bend_EF002_HP"
                 elif "Short Radius Bend" in description_param and converted_instance_diameter_param_value <= 300:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Bend_AF002_DI"
+                        family_name = "PAMBUILDINGUK_ES_Bend_AF002_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Bend_AF002_NG"
+                        family_name = "PAMBUILDINGUK_ES_Bend_AF002_NG"
                 elif "Single Boss at 88º" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Boss_AF090_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Boss_AF090_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Boss_AF090_NG"
+                        family_name = "PAMBUILDINGUK_ES_Single Boss_AF090_NG"
                 elif "Single Boss with Drilled/Tapped 50mm Boss Connection" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Boss_EF090T_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Boss_EF090T_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Boss_EF090T_NG"               
+                        family_name = "PAMBUILDINGUK_ES_Single Boss_EF090T_NG"               
                 elif "Single Branch Long Tail Radius Curve" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch Long Tail Radius Curve_EF096_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch Long Tail Radius Curve_EF096_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch Long Tail Radius Curve_EF096_NG"               
+                        family_name = "PAMBUILDINGUK_ES_Single Branch Long Tail Radius Curve_EF096_NG"               
                 elif "Single Branch with Radius Curve" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch Radius Curve_AF06R_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch Radius Curve_AF06R_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch Radius Curve_AF06R_NG"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch Radius Curve_AF06R_NG"
                 elif "Single Branch with Access Radius Curve" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch With Access Radius Curve_EF07R_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch With Access Radius Curve_EF07R_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch With Access Radius Curve_EF07R_NG"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch With Access Radius Curve_EF07R_NG"
                 # Determine family based on description and diameter
                 elif "Single Branch" in description_param and converted_instance_diameter_param_value > 300:
-                    family_name = "SGPAMUK_ES_Single Branch_EF006_HP"
+                    family_name = "PAMBUILDINGUK_ES_Single Branch_EF006_HP"
                 elif "Single Branch" in description_param and converted_instance_diameter_param_value <= 300:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch_AF006_DI"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch_AF006_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Single Branch_AF006_NG"
+                        family_name = "PAMBUILDINGUK_ES_Single Branch_AF006_NG"
                 elif "Stack Support Pipe" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Stack Support Pipe_EF050 & EF051_DI"
+                        family_name = "PAMBUILDINGUK_ES_Stack Support Pipe_EF050 & EF051_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Stack Support Pipe_EF050 & EF051_NG"
+                        family_name = "PAMBUILDINGUK_ES_Stack Support Pipe_EF050 & EF051_NG"
                 elif "Stench Trap" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Stench Trap_EF081_DI"
+                        family_name = "PAMBUILDINGUK_ES_Stench Trap_EF081_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Stench Trap_EF081_NG"
+                        family_name = "PAMBUILDINGUK_ES_Stench Trap_EF081_NG"
                 elif "Strap-On Boss" in description_param:
-                    family_name = "SGPAMUK_ES_Strap-On-Boss_EF133"                
+                    family_name = "PAMBUILDINGUK_ES_Strap-On-Boss_EF133"                
                 elif "Taper Pipe" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Taper Pipe_EF028_DI"
+                        family_name = "PAMBUILDINGUK_ES_Taper Pipe_EF028_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Taper Pipe_EF028_NG"
+                        family_name = "PAMBUILDINGUK_ES_Taper Pipe_EF028_NG"
                 elif "Transitional Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Transitional Connector_EF059_DI"
+                        family_name = "PAMBUILDINGUK_ES_Transitional Connector_EF059_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Transitional Connector_EF059_NG"
+                        family_name = "PAMBUILDINGUK_ES_Transitional Connector_EF059_NG"
                 elif "Universal Connector" in description_param:
-                    family_name = "SGPAMUK_ES_Universal Connector_EF071R"
+                    family_name = "PAMBUILDINGUK_ES_Universal Connector_EF071R"
                 elif "Entry/Terminal Venting Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Venting Branch Entry-Terminal_EF013_DI"
+                        family_name = "PAMBUILDINGUK_ES_Venting Branch Entry-Terminal_EF013_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Venting Branch Entry-Terminal_EF013_NG"
+                        family_name = "PAMBUILDINGUK_ES_Venting Branch Entry-Terminal_EF013_NG"
                 elif "Interconnecting Venting Branch" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Venting Branch Interconnecting_EF013_DI"
+                        family_name = "PAMBUILDINGUK_ES_Venting Branch Interconnecting_EF013_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Venting Branch Interconnecting_EF013_NG"                                         
+                        family_name = "PAMBUILDINGUK_ES_Venting Branch Interconnecting_EF013_NG"                                         
                 
                 # Only perform mapping if description matches
                 elif "Metallic Coupling" in description_param:
@@ -578,28 +578,28 @@ try:
                 # Pipe Accessories
                 elif "Offset" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Offset_EF024_DI"                                               
+                        family_name = "PAMBUILDINGUK_ES_Offset_EF024_DI"                                               
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Offset_EF024_NG"                        
+                        family_name = "PAMBUILDINGUK_ES_Offset_EF024_NG"                        
                 elif "Roof Connector for Asphalts" in description_param:
-                    family_name = "SGPAMUK_ES_Roof Connector For Asphalts_EF073"
+                    family_name = "PAMBUILDINGUK_ES_Roof Connector For Asphalts_EF073"
                 elif "Roof Penetration Flange" in description_param:
-                    family_name = "SGPAMUK_ES_Roof Penetration Flange with Gasket_EF079"
+                    family_name = "PAMBUILDINGUK_ES_Roof Penetration Flange with Gasket_EF079"
                 elif "Branch Trap" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Trap Branch_EF080_DI"
+                        family_name = "PAMBUILDINGUK_ES_Trap Branch_EF080_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Trap Branch_EF080_NG" 
+                        family_name = "PAMBUILDINGUK_ES_Trap Branch_EF080_NG" 
                 elif description_param == "Trap Plain":
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Trap Plain Branch_EF034_DI"
+                        family_name = "PAMBUILDINGUK_ES_Trap Plain Branch_EF034_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Trap Plain Branch_EF034_NG" 
+                        family_name = "PAMBUILDINGUK_ES_Trap Plain Branch_EF034_NG" 
                 elif description_param == "Trap Plain With Access Bottom":
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "SGPAMUK_ES_Trap Plain With Access Bottom_EF037_DI"
+                        family_name = "PAMBUILDINGUK_ES_Trap Plain With Access Bottom_EF037_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "SGPAMUK_ES_Trap Plain With Access Bottom_EF037_NG" 
+                        family_name = "PAMBUILDINGUK_ES_Trap Plain With Access Bottom_EF037_NG" 
 
                 # Change the type 
                 if family_name:

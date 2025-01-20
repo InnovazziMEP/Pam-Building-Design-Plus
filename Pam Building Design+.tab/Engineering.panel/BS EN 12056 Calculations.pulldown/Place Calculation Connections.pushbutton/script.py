@@ -186,7 +186,7 @@ for family_symbol in collector:
 if not len(matching_families) > 0:
     forms.alert(
         "No suitable family found in your project.",
-        title='Load SGPAMUK_ES_EN 12056 Calculation Connector'
+        title='Load PAMBUILDINGUK_ES_EN 12056 Calculation Connector'
     )
     script.exit()
 
@@ -354,7 +354,7 @@ def select_elements():
                             added_rules = []
 
                             # Transaction to add rules to routing preferences
-                            with Transaction(doc, "Add SGPAMUK_ES_EN 12056 Calculation Connector to Routing Preferences") as t1:
+                            with Transaction(doc, "Add PAMBUILDINGUK_ES_EN 12056 Calculation Connector to Routing Preferences") as t1:
                                 t1.Start()
                                 try:
                                     unique_pipe_types = {}
@@ -431,7 +431,7 @@ def select_elements():
                                             raise
 
                                 # Transaction to remove the rules added in t1
-                                with Transaction(doc, "Remove SGPAMUK_ES_EN 12056 Calculation Connector from Routing Preferences") as t3:
+                                with Transaction(doc, "Remove PAMBUILDINGUK_ES_EN 12056 Calculation Connector from Routing Preferences") as t3:
                                     t3.Start()
                                     try:
                                         for routManager, group_type, index in added_rules:

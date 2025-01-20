@@ -233,7 +233,7 @@ def check_coupling_compatibility():
 if not check_coupling_compatibility():
     forms.alert(
         "No suitable family found in your project for selected '{}'.".format(selected_coupling),
-        title='Load PAM Building Content'
+        title='Load Pam Building Content'
     )
 
 else:
