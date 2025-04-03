@@ -5,7 +5,7 @@ layout:
   - Load
 
 background:
-  panel: '#EEEEEE'
+  #panel: '#EEEEEE'
   title: '#E36937'
   slideout: '#EEEEEE'
 

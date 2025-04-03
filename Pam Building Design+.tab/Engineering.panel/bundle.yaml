@@ -8,6 +8,6 @@ layout:
   - BS EN 12056 Calculations
 
 background:
-  panel: '#EEEEEE'
+  #panel: '#EEEEEE'
   title: '#E36937'
   slideout: '#EEEEEE'
