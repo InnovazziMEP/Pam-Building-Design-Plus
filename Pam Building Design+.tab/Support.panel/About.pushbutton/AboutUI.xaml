@@ -160,11 +160,11 @@
                                     Margin="0,0,0,10"><Run Text="With this pyRevit extension, which is mainly aimed at public health engineering, you will enhance productivity and save time with repetitive tasks."/><LineBreak/><Run/><LineBreak/><Run Language="en-gb" Text="You can now easily schedule your Revit elements by level using our Set Reference Level tool which updates all level related parameters for multiple categories."/><LineBreak/><Run/><LineBreak/><Run Language="en-gb" Text="Place and rotate access doors, quickly align your annotations in floor plan views, add our couplings on pipes every 3 metres or even convert from our generic content to full data in seconds."/></TextBlock>
 
                         <TextBlock FontFamily="Source Sans Pro" 
-                                    Margin="0,0,0,5"><Run Text="For any technical enquiries please call 01952 262 529 or email us at technical.pambuilding@saint-gobain.com."/></TextBlock>
+                                    Margin="0,0,0,5"><Run Text="For any technical enquiries please call 01952 262 529 or email us at technical.uk@pambuilding.com."/></TextBlock>
 
                         <!-- Image with Animation -->
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
-    <Hyperlink NavigateUri="mailto:technical.pambuilding@saint-gobain.com" RequestNavigate="Hyperlink_RequestNavigate"
+    <Hyperlink NavigateUri="mailto:technical.uk@pambuilding.com" RequestNavigate="Hyperlink_RequestNavigate"
                TextDecorations="None">
         <Image x:Name="Email"
                Source="https://iili.io/27VNhcQ.md.png"
