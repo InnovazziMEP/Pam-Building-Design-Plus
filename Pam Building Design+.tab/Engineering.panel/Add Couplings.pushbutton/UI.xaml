@@ -130,7 +130,7 @@
                 <!-- Stackpanel for couplings -->
                 <StackPanel
                     HorizontalAlignment="Center" 
-                    Height="250" Width="397"  
+                    Height="260" Width="397"  
                     VerticalAlignment="Top" Margin="120,150,50,0">
 
                     <RadioButton x:Name="EC002" 
