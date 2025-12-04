@@ -146,7 +146,7 @@
                                    Height="20" Width="100" 
                                    Margin="20,10,0,0" 
                                    TextWrapping="Wrap"                      
-                                   FontSize="14"><Run Text="Select Tag"/><Run Language="en-gb" Text=" Type"/><Run Text="s"/></TextBlock>
+                                   FontSize="14"><Run Text="Select Tags"/></TextBlock>
 
                         <!-- Second TextBlock -->
                         <TextBlock HorizontalAlignment="Left"
