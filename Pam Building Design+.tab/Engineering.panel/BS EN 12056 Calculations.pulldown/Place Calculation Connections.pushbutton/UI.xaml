@@ -145,9 +145,9 @@
                         <TextBlock 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center" 
-                        Height="20" Width="180" 
+                        Height="20" Width="160" 
                         Margin="20,0,0,0" 
-                        TextWrapping="Wrap"><Run Text="Elevation above the level(s)"/></TextBlock>
+                        TextWrapping="Wrap"><Run Text="Elevation above the level"/></TextBlock>
 
                         <!-- TextBox for elevation -->
                         <TextBox x:Name="input_elevation" 
