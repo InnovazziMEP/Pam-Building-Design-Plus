@@ -189,7 +189,7 @@
                         <!-- Second TextBlock -->
                         <TextBlock HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
-                                   Height="20" Width="495" 
+                                   Height="30" Width="495" 
                                    Margin="0,40,0,0" 
                                    TextWrapping="Wrap" 
                                    FontSize="11.5"><Run Text="The list below is for the selection filter. You can choose to select only elements of specific categories"/></TextBlock>
