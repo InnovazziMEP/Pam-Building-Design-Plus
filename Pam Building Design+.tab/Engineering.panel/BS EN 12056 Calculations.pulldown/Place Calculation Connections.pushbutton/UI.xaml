@@ -145,9 +145,9 @@
                         <TextBlock 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center" 
-                        Height="20" Width="160" 
+                        Height="20" Width="180" 
                         Margin="20,0,0,0" 
-                        TextWrapping="Wrap"><Run Text="Elevation above the l"/><Run Language="en-gb" Text="e"/><Run Text="vel"/><Run Language="en-gb" Text="("/><Run Text="s"/><Run Language="en-gb" Text=")"/></TextBlock>
+                        TextWrapping="Wrap"><Run Text="Elevation above the level(s)"/></TextBlock>
 
                         <!-- TextBox for elevation -->
                         <TextBox x:Name="input_elevation" 
@@ -203,7 +203,7 @@
                         <!-- Second TextBlock -->
                         <TextBlock HorizontalAlignment="Left"
                                 VerticalAlignment="Top"
-                                Height="20" Width="450" 
+                                Height="30" Width="450" 
                                 Margin="20,40,0,0" 
                                 TextWrapping="Wrap" 
                                 FontSize="11.2"><Run Text="P"/><Run Text="lease choose "/><Run Language="en-gb" Text="the"/><Run Text=" levels where "/><Run Language="en-gb" Text="the "/><Run Text="calculation connections will be placed on your selected pipes"/></TextBlock>
