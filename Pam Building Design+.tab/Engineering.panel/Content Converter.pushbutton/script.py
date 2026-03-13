@@ -466,21 +466,21 @@ try:
                         family_name = "PAMBUILDINGUK_ES_Long Tail Single Branch_EF056_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
                         family_name = "PAMBUILDINGUK_ES_Long Tail Single Branch_EF056_NG"
-                elif "Manifold Connector" in description_param:
-                    if selected_coupling == 'EC002 - Ductile Iron Coupling':
-                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_DI"
-                    elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
-                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_NG"
-                elif "Corner Multi-Waste Manifold Connector" in description_param:
+                elif description_param == "Corner Multi-Waste Manifold Connector":
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
                         family_name = "PAMBUILDINGUK_ES_Manifold Connector Corner_EF099_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
                         family_name = "PAMBUILDINGUK_ES_Manifold Connector Corner_EF099_NG"
-                elif "Multi-Waste Manifold Connector" in description_param:
+                elif description_param == "Multi-Waste Manifold Connector":
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
                         family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF095_DI"
                     elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
                         family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF095_NG"
+                elif description_param == "Manifold Connector":
+                    if selected_coupling == 'EC002 - Ductile Iron Coupling':
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_DI"
+                    elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
+                        family_name = "PAMBUILDINGUK_ES_Manifold Connector_EF094_NG"
                 elif "Push-Fit Movement Connector" in description_param:
                     if selected_coupling == 'EC002 - Ductile Iron Coupling':
                         family_name = "PAMBUILDINGUK_ES_Movement Connector_EF058_DI"
