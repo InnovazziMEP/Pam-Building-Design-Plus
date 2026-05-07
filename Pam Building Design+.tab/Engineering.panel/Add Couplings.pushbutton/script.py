@@ -187,15 +187,23 @@ if not selected_coupling:
 if selected_coupling == 'EC002 - Ductile Iron Coupling':
     allowed_diameters = [50, 70, 100, 125, 150, 200, 250, 300]
     keywords = ['Ductile Iron Coupling']
+    allowed_diameters_extra = []
+    keywords_extra = []
 elif selected_coupling == 'EC002NG - RAPID S NG Coupling':
     allowed_diameters = [50, 70, 100, 125, 150, 200, 250, 300]
     keywords = ['NG Coupling']
+    allowed_diameters_extra = []
+    keywords_extra = []
 elif selected_coupling == 'EC002HP - HP Flex Coupling':
-    allowed_diameters = [50, 70, 100, 125, 150, 200, 250, 300, 400, 500, 600]
+    allowed_diameters = [50, 70, 250, 300, 400, 500, 600]
     keywords = ['Flex Coupling']
+    allowed_diameters_extra = [100, 150, 200]
+    keywords_extra = ['Flex Slim Coupling']
 elif selected_coupling == 'EC002HP-G - HP Grip Coupling':
-    allowed_diameters = [50, 70, 100, 125, 150, 200, 250, 300, 400, 500, 600]
+    allowed_diameters = [50, 70, 300, 400, 500, 600]
     keywords = ['Grip Coupling']
+    allowed_diameters_extra = [100, 125, 150, 200, 250]
+    keywords_extra = ['Grip Slim Coupling']
 
 # Convert allowed diameters to integers
 allowed_diameters = [int(diameter) for diameter in allowed_diameters]
@@ -208,16 +216,19 @@ for family_symbol in collector:
     description_param = family_symbol.get_Parameter(BuiltInParameter.ALL_MODEL_DESCRIPTION)
     if description_param:
         description_value = description_param.AsString()
-        if description_value and any(keyword in description_value for keyword in keywords):
-            family_name = family_symbol.FamilyName
+        if description_value:
             family_type_name = family_symbol.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM).AsString()
-
-            # Extract and validate DN size from family type name
             dn_size = extract_and_validate_dn_size(family_type_name)
 
-            # Exclude DN sizes that are not allowed
-            if dn_size and dn_size in allowed_diameters:
-                matching_families.append((dn_size, family_symbol))
+            # Check extra keywords/diameters (Slim variants) FIRST
+            if keywords_extra and any(keyword in description_value for keyword in keywords_extra):
+                if dn_size and dn_size in allowed_diameters_extra:
+                    matching_families.append((dn_size, family_symbol))
+
+            # Check primary keywords/diameters
+            elif any(keyword in description_value for keyword in keywords):
+                if dn_size and dn_size in allowed_diameters:
+                    matching_families.append((dn_size, family_symbol))
 
 # Sort matching families based on DN size (smallest to largest)
 matching_families.sort(key=lambda x: x[0])
@@ -268,7 +279,8 @@ else:
                     pipe_diameter = get_pipe_diameter(pipe)
 
                     if pipe_length > 3.01:
-                        if pipe_diameter and int(pipe_diameter) in allowed_diameters:
+                        all_allowed = allowed_diameters + allowed_diameters_extra
+                        if pipe_diameter and int(pipe_diameter) in all_allowed:
                             ok_pipes.append(pipe)
                             found_suitable_pipe = True
                         else:
