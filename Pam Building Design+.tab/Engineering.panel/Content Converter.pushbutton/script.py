@@ -273,6 +273,16 @@ def get_family(description_param, selected_coupling):
     return None
 
 
+def get_pipe_segment_id(doc, pipe_type_elem):
+    """Return the PipeSegment ElementId from the first rule in the pipe type's
+    routing preferences. All sizes share the same segment so no diameter matching needed."""
+    rpm = pipe_type_elem.RoutingPreferenceManager
+    num_rules = rpm.GetNumberOfRules(RoutingPreferenceRuleGroupType.Segments)
+    if num_rules > 0:
+        return rpm.GetRule(RoutingPreferenceRuleGroupType.Segments, 0).MEPPartId
+    return None
+
+
 # Main logic
 try:
     # Loop until elements are selected
@@ -298,6 +308,9 @@ try:
     num_pipes_changed = 0  # Counter for pipes changed
     num_fittings_changed = 0  # Counter for fittings and accessories changed
 
+    # Look up the pipe segment from the target pipe type once — all sizes share the same segment
+    target_segment_id = get_pipe_segment_id(doc, doc.GetElement(pipe_type.Id))
+
     # Loop through picked elements to change pipe types
     for element in selected_elements:
         try:
@@ -305,6 +318,14 @@ try:
             # Process pipes
             if element.Category.Name == "Pipes":
                 element.ChangeTypeId(pipe_type.Id)
+
+                # ChangeTypeId does NOT update the Pipe Segment instance parameter —
+                # set it explicitly to the segment from the new pipe type.
+                if target_segment_id:
+                    seg_param = element.get_Parameter(BuiltInParameter.RBS_PIPE_SEGMENT_PARAM)
+                    if seg_param and not seg_param.IsReadOnly:
+                        seg_param.Set(target_segment_id)
+
                 num_pipes_changed += 1  # Increment the counter
             # Process pipe fittings and pipe accessories
             else:
