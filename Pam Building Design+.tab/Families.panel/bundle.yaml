@@ -3,6 +3,7 @@ title:
 layout:
   - Save
   - Load
+  - Rename
 
 background:
   #panel: '#EEEEEE'
