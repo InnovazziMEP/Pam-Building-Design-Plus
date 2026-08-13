@@ -3,7 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="MainWindow" Height="550" Width="600"
     WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    PreviewKeyDown="window_key_down">
 
     <Window.Resources>
 
@@ -84,7 +85,6 @@
                                TextDecorations="None"
                                RequestNavigate="Hyperlink_RequestNavigate">
                         <Image x:Name="logo"
-                               Source="https://iili.io/27tnOCB.md.png"
                                Height="98" Width="166"
                                Margin="0,0,0,0"
                                RenderOptions.BitmapScalingMode="HighQuality"
@@ -167,7 +167,6 @@
     <Hyperlink NavigateUri="mailto:technical.uk@pambuilding.com" RequestNavigate="Hyperlink_RequestNavigate"
                TextDecorations="None">
         <Image x:Name="Email"
-               Source="https://iili.io/27VNhcQ.md.png"
                Height="100" Width="100"
                RenderOptions.BitmapScalingMode="HighQuality"
                Stretch="Uniform">
