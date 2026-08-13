@@ -129,7 +129,7 @@
         <Grid>
           <TextBlock Text="Batch Rename Families"
                      VerticalAlignment="Center" HorizontalAlignment="Center"
-                     FontSize="13" FontWeight="Bold"
+                     FontSize="14" FontWeight="Bold"
                      Foreground="White" TextWrapping="NoWrap"/>
           <StackPanel Orientation="Horizontal"
                       HorizontalAlignment="Right" VerticalAlignment="Center"
@@ -149,8 +149,8 @@
                     MaxHeight="860">
         <StackPanel Margin="16,12,16,16">
 
-          <!-- ── LOGO ────────────────────────────────────────────────── -->
-          <Image x:Name="logo" Source="https://iili.io/27tnOCB.md.png"
+          <!-- Logo image: Source is set from an embedded Base64 string in script.py -->
+          <Image x:Name="logo"
                  HorizontalAlignment="Center" VerticalAlignment="Top"
                  Height="98" Width="166"
                  Margin="0,0,0,6" Cursor="Hand"
@@ -189,7 +189,7 @@
           </Image>
 
           <!-- ── FAMILY LIST ─────────────────────────────────────────── -->
-          <TextBlock Style="{StaticResource SectionLabel}" Text="Project Families"/>
+          <TextBlock Style="{StaticResource SectionLabel}" Text="Project Families" FontSize="14"/>
           <Border Style="{StaticResource Card}">
             <StackPanel>
 
